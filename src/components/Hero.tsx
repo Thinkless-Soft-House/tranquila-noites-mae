@@ -1,105 +1,119 @@
 
-import { ArrowRight, Star, Users, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Star, Shield, Users } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-primary-600 via-purple-700 to-primary-800 overflow-hidden">
-      {/* Background decorations */}
+    <section className="relative min-h-screen bg-gradient-to-br from-primary-50 via-white to-accent-50 overflow-hidden">
+      {/* Background decorative elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-accent-400 rounded-full opacity-20 blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 bg-accent-300 rounded-full opacity-30 blur-2xl animate-float" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white rounded-full opacity-10 blur-xl animate-float" style={{animationDelay: '4s'}}></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary-200 rounded-full opacity-20 animate-float"></div>
+        <div className="absolute top-60 right-20 w-24 h-24 bg-accent-300 rounded-full opacity-30 animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute bottom-40 left-32 w-20 h-20 bg-primary-300 rounded-full opacity-25 animate-float" style={{animationDelay: '2s'}}></div>
       </div>
 
-      <div className="container mx-auto px-4 pt-20 pb-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[80vh]">
-          {/* Left Content */}
-          <div className="text-center lg:text-left space-y-6 lg:space-y-8 animate-fade-in">
-            {/* Social proof badge */}
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-3 py-2 rounded-full text-sm font-medium">
-              <Users className="w-4 h-4" />
-              <span className="text-xs sm:text-sm">Mais de 5.000 mães transformadas</span>
-            </div>
-            
-            <div className="space-y-4 lg:space-y-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight">
-                Cansada de noites
-                <span className="block bg-gradient-to-r from-accent-300 to-accent-500 bg-clip-text text-transparent">
-                  sem dormir?
+      <div className="container mx-auto px-4 pt-8 pb-16 relative">
+        {/* Logo */}
+        <div className="flex items-center justify-center mb-12 animate-fade-in">
+          <img 
+            src="/lovable-uploads/f89c4eb7-377c-4100-8dde-b118becb677d.png" 
+            alt="Mamãe Tranquila Logo" 
+            className="h-20 w-auto drop-shadow-lg"
+          />
+        </div>
+
+        {/* Trust indicators */}
+        <div className="flex justify-center items-center gap-8 mb-12 animate-fade-in" style={{animationDelay: '0.2s'}}>
+          <div className="flex items-center gap-2 text-primary-600">
+            <Star className="w-5 h-5 fill-current" />
+            <span className="text-sm font-medium">+5.000 mães satisfeitas</span>
+          </div>
+          <div className="flex items-center gap-2 text-primary-600">
+            <Shield className="w-5 h-5" />
+            <span className="text-sm font-medium">Garantia de 7 dias</span>
+          </div>
+          <div className="flex items-center gap-2 text-primary-600">
+            <Users className="w-5 h-5" />
+            <span className="text-sm font-medium">Aprovado por especialistas</span>
+          </div>
+        </div>
+        
+        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+          {/* Left content */}
+          <div className="text-center lg:text-left space-y-8 animate-fade-in" style={{animationDelay: '0.4s'}}>
+            <div className="space-y-6">
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+                <span className="text-gray-800">Cansada de</span>
+                <span className="block text-primary-600 bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+                  noites sem dormir?
+                </span>
+                <span className="block text-gray-800 text-4xl lg:text-5xl mt-4">
+                  Nós temos a <span className="text-accent-600">solução</span>.
                 </span>
               </h1>
               
-              <p className="text-lg sm:text-xl lg:text-2xl text-purple-100 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Descubra o guia que tem transformado a rotina de milhares de mães
+              <p className="text-xl text-gray-600 leading-relaxed max-w-xl lg:max-w-none">
+                Descubra o método que já transformou a vida de <strong className="text-primary-600">milhares de mães</strong> e 
+                finalmente tenha as noites tranquilas que você merece.
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-4 lg:gap-8 py-6 lg:py-8">
-              <div className="text-center lg:text-left">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-accent-300">97%</div>
-                <div className="text-sm sm:text-base text-purple-200">das mães recomendam</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-accent-300">7 dias</div>
-                <div className="text-sm sm:text-base text-purple-200">para ver resultados</div>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
+            <div className="space-y-4">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white px-6 py-4 lg:px-8 lg:py-6 text-base lg:text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 group w-full sm:w-auto"
+                className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-10 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform"
               >
-                🎯 Quero minha maternidade mais leve
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                ✨ Quero minha maternidade mais leve
               </Button>
+              
+              <p className="text-sm text-gray-500 flex items-center justify-center lg:justify-start gap-2">
+                <Shield className="w-4 h-4" />
+                Compra 100% segura • Acesso imediato
+              </p>
             </div>
 
-            <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-purple-200">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-accent-400 text-accent-400" />
-                ))}
+            {/* Social proof */}
+            <div className="flex items-center justify-center lg:justify-start gap-1 pt-4">
+              <div className="flex -space-x-2">
+                <img src="/lovable-uploads/07734f1e-a5f0-4aba-971a-2dc3247575f4.png" alt="Cliente" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                <img src="/lovable-uploads/3d25edc9-75e1-4ebe-a4aa-53ac97b5ae70.png" alt="Cliente" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                <img src="/lovable-uploads/5da3d5d9-b257-4191-a403-37731032c15e.png" alt="Cliente" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
               </div>
-              <span className="text-xs sm:text-sm">Avaliação 4.9/5 (2.847 avaliações)</span>
+              <div className="ml-3">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-sm text-gray-600">Mais de 5.000 avaliações 5 estrelas</p>
+              </div>
             </div>
           </div>
-
-          {/* Right Content - Product Image */}
-          <div className="relative flex justify-center lg:justify-end animate-scale-in" style={{animationDelay: '0.3s'}}>
+          
+          {/* Right content - Product image */}
+          <div className="flex justify-center animate-scale-in" style={{animationDelay: '0.6s'}}>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-400 to-accent-500 rounded-3xl blur-3xl opacity-30 transform rotate-6"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-3xl blur-2xl opacity-20 transform rotate-6"></div>
               <img 
                 src="/lovable-uploads/80510ec7-7bcf-44d8-8b82-0935e173eea4.png" 
                 alt="Mamãe Tranquila - Guia Digital" 
-                className="relative w-72 sm:w-80 lg:w-96 max-w-full rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                className="relative w-full max-w-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
               />
               
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 bg-green-500 text-white p-3 rounded-full shadow-lg animate-pulse">
-                <Award className="w-6 h-6" />
-              </div>
-              
-              <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl p-3 shadow-lg">
+              {/* Floating badges */}
+              <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg animate-float">
                 <div className="text-center">
-                  <div className="text-lg font-bold text-gray-800">7 dias</div>
-                  <div className="text-sm text-gray-600">de garantia</div>
+                  <div className="text-2xl font-bold text-primary-600">100%</div>
+                  <div className="text-xs text-gray-600">Digital</div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-12 lg:mt-16 animate-fade-in" style={{animationDelay: '0.6s'}}>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 lg:p-6 max-w-2xl mx-auto">
-            <p className="text-white text-sm sm:text-base mb-4">
-              ✅ Acesso imediato • ✅ Garantia de 7 dias • ✅ Suporte dedicado
-            </p>
-            <div className="inline-flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-medium animate-pulse">
-              ⏰ Oferta por tempo limitado
+              
+              <div className="absolute -bottom-4 -left-4 bg-white rounded-full p-3 shadow-lg animate-float" style={{animationDelay: '1s'}}>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-accent-600">7</div>
+                  <div className="text-xs text-gray-600">Dias</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
