@@ -5,8 +5,9 @@ import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import Guarantee from "@/components/Guarantee";
 import FAQ from "@/components/FAQ";
-import FinalCTA from "@/components/FinalCTA";
+import DownsellFinalCTA from "@/components/DownsellFinalCTA";
 import { useEffect, useRef, useState } from "react";
+import { Clock } from "lucide-react";
 
 const COUNTDOWN_KEY = "downsell_countdown_expiry";
 const INITIAL_MINUTES = 10;
@@ -204,7 +205,7 @@ const Downsell = () => {
         <Testimonials />
         <Guarantee />
         <FAQ />
-        <FinalCTA />
+        <DownsellFinalCTA />
       </div>
     </>
   );
