@@ -26,8 +26,8 @@ const ProductIntro = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-primary-50 via-white to-accent-50">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-gradient-to-br from-primary-50 via-white to-accent-50 overflow-x-hidden">
+      <div className="container mx-auto px-2 sm:px-4 max-w-full">
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full font-medium mb-6">
             <Star className="w-4 h-4 fill-current" />
@@ -70,7 +70,7 @@ const ProductIntro = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
-          <div className="animate-scale-in" style={{animationDelay: '0.4s'}}>
+          <div className="animate-scale-in w-full max-w-[95vw] mx-auto" style={{animationDelay: '0.4s'}}>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-3xl blur-3xl opacity-30 transform rotate-3"></div>
               <img 

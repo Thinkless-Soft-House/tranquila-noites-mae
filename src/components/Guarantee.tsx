@@ -110,7 +110,7 @@ const Guarantee = () => {
 
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full group"
+                  className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-6 sm:px-10 py-7 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full group flex items-center justify-center gap-2 whitespace-normal text-center"
                   onClick={() => {
                     const el = document.getElementById('cta-transformar-noites');
                     if (el) {
@@ -118,8 +118,11 @@ const Guarantee = () => {
                     }
                   }}
                 >
-                  🛡️ Quero começar com segurança total
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <span className="flex items-center justify-center gap-2 w-full break-words whitespace-normal">
+                    <span role="img" aria-label="escudo">🛡️</span>
+                    <span>Quero começar com segurança total</span>
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                  </span>
                 </Button>
               </div>
             </div>
