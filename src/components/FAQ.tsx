@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -91,10 +90,15 @@ const FAQ = () => {
                   Nossa equipe está pronta para te ajudar! Entre em contato conosco pelo WhatsApp 
                   e tiramos todas as suas dúvidas antes da compra.
                 </p>
-                <div className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-full font-medium hover:bg-green-600 transition-colors cursor-pointer">
+                <a
+                  href="https://wa.me/553196333896?text=Oi%2C%20tudo%20bem%3F%20Tenho%20d%C3%BAvidas%20sobre%20o%20livro%20Mam%C3%A3e%20Tranquila."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-full font-medium hover:bg-green-600 transition-colors cursor-pointer"
+                >
                   <span>💬</span>
                   <span>Falar no WhatsApp</span>
-                </div>
+                </a>
               </div>
             </div>
           </div>
