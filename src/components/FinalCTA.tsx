@@ -131,7 +131,7 @@ const FinalCTA = () => {
               <div className="bg-red-500 text-white rounded-2xl p-6 text-center">
                 <div className="flex items-center justify-center gap-2 mb-3">
                   <Clock className="w-5 h-5" />
-                  <span className="font-bold">⏰ Últimas horas da promoção!</span>
+                  <span className="font-bold">Últimas horas da promoção!</span>
                 </div>
                 <p className="text-sm">
                   O preço promocional de R$ 37 é válido apenas hoje. 
