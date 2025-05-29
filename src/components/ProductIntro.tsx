@@ -1,4 +1,3 @@
-
 import { Star, BookOpen, CheckCircle, Clock, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -123,6 +122,12 @@ const ProductIntro = () => {
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full lg:w-auto"
+              onClick={() => {
+                const el = document.getElementById('cta-transformar-noites');
+                if (el) {
+                  el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+              }}
             >
               🎯 Quero transformar minhas noites
             </Button>

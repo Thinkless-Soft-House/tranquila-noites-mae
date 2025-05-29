@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Shield, Clock, Star, ArrowRight, Gift } from "lucide-react";
 
@@ -43,7 +42,7 @@ const FinalCTA = () => {
                 />
                 
                 {/* Price badge */}
-                <div className="absolute -top-4 -right-4 bg-accent-500 text-white rounded-full p-4 shadow-lg animate-float">
+                <div className="absolute -top-4 right-2 sm:-right-4 bg-accent-500 text-white rounded-full p-4 shadow-lg animate-float">
                   <div className="text-center">
                     <div className="text-xs font-medium">De R$ 97 por</div>
                     <div className="text-2xl font-bold">R$ 37</div>
@@ -70,7 +69,7 @@ const FinalCTA = () => {
 
             {/* Right side - CTA */}
             <div className="space-y-8 animate-fade-in" style={{animationDelay: '0.4s'}}>
-              <div className="bg-white rounded-3xl p-8 shadow-2xl">
+              <div className="bg-white rounded-3xl p-4 sm:p-8 shadow-2xl max-w-[95vw] mx-auto">
                 <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
                   🎯 Transforme suas noites hoje!
                 </h3>
@@ -103,11 +102,18 @@ const FinalCTA = () => {
                 </div>
 
                 <Button 
+                  id="cta-transformar-noites"
                   size="lg" 
-                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-6 text-xl font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full group"
+                  className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 sm:px-10 py-8 text-xl font-bold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full group mx-auto flex items-center justify-center gap-2 whitespace-normal text-center"
+                  asChild
                 >
-                  🌙 Quero transformar minhas noites agora
-                  <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <a href="https://pay.kirvano.com/723dbad7-ba44-4223-acc9-a874956fc05b">
+                    <span className="flex items-center justify-center gap-2 w-full break-words whitespace-normal">
+                      <span role="img" aria-label="lua">🌙</span>
+                      <span>Quero transformar minhas noites agora</span>
+                      <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                    </span>
+                  </a>
                 </Button>
                 
                 <div className="text-center mt-6 space-y-2">

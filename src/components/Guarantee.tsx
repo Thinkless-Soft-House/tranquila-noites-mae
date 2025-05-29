@@ -1,12 +1,11 @@
-
 import { Shield, Clock, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Guarantee = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-green-50 via-white to-blue-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+    <section className="py-24 bg-gradient-to-br from-green-50 via-white to-blue-50 overflow-x-hidden">
+      <div className="container mx-auto px-2 sm:px-4 max-w-full">
+        <div className="max-w-5xl mx-auto w-full">
           <div className="text-center mb-16 animate-fade-in">
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full font-medium mb-6">
               <Shield className="w-4 h-4" />
@@ -21,10 +20,10 @@ const Guarantee = () => {
             </h2>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full max-w-full">
             {/* Left side - Guarantee details */}
-            <div className="space-y-8 animate-slide-up" style={{animationDelay: '0.2s'}}>
-              <div className="bg-white rounded-3xl p-8 shadow-lg border">
+            <div className="space-y-8 animate-slide-up w-full max-w-full" style={{animationDelay: '0.2s'}}>
+              <div className="bg-white rounded-3xl p-4 sm:p-8 shadow-lg border w-full max-w-full">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center">
                     <Shield className="w-8 h-8 text-white" />
@@ -57,7 +56,7 @@ const Guarantee = () => {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-6 border border-blue-200">
+              <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-4 sm:p-6 border border-blue-200 w-full max-w-full">
                 <h4 className="text-xl font-bold text-gray-800 mb-3">
                   💡 Como funciona nossa garantia:
                 </h4>
@@ -79,17 +78,17 @@ const Guarantee = () => {
             </div>
 
             {/* Right side - Guarantee image and CTA */}
-            <div className="text-center animate-scale-in" style={{animationDelay: '0.4s'}}>
-              <div className="relative mb-8">
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-400 rounded-full blur-3xl opacity-20"></div>
+            <div className="text-center animate-scale-in w-full max-w-full" style={{animationDelay: '0.4s'}}>
+              <div className="relative mb-8 w-full flex justify-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-400 rounded-full blur-3xl opacity-20 w-48 h-48 left-1/2 -translate-x-1/2"></div>
                 <img 
                   src="/lovable-uploads/67e2abde-2a80-4d9f-9eba-48ac1f182fbd.png" 
                   alt="Garantia de 7 dias" 
-                  className="relative w-48 h-48 mx-auto drop-shadow-2xl"
+                  className="relative w-40 h-40 sm:w-48 sm:h-48 mx-auto drop-shadow-2xl max-w-full"
                 />
               </div>
               
-              <div className="bg-white rounded-3xl p-8 shadow-xl border">
+              <div className="bg-white rounded-3xl p-4 sm:p-8 shadow-xl border w-full max-w-full">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">
                   Sua tranquilidade é nossa prioridade
                 </h3>
@@ -99,7 +98,7 @@ const Guarantee = () => {
                   Você não tem nada a perder, apenas noites de paz a ganhar.
                 </p>
 
-                <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-6 mb-6">
+                <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-4 sm:p-6 mb-6 w-full max-w-full">
                   <div className="flex items-center justify-center gap-3 mb-3">
                     <Clock className="w-6 h-6 text-green-600" />
                     <span className="text-lg font-semibold text-gray-800">Oferta por tempo limitado</span>
@@ -112,6 +111,12 @@ const Guarantee = () => {
                 <Button 
                   size="lg" 
                   className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full group"
+                  onClick={() => {
+                    const el = document.getElementById('cta-transformar-noites');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                  }}
                 >
                   🛡️ Quero começar com segurança total
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

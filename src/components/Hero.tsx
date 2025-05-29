@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Star, Shield, Users } from "lucide-react";
 
@@ -40,9 +39,9 @@ const Hero = () => {
         
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           {/* Left content */}
-          <div className="text-center lg:text-left space-y-8 animate-fade-in" style={{animationDelay: '0.4s'}}>
+          <div className="text-center lg:text-left space-y-8 animate-fade-in w-full max-w-[95vw] sm:max-w-xl mx-auto" style={{animationDelay: '0.4s'}}>
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight break-words">
                 <span className="text-gray-800">Cansada de</span>
                 <span className="block text-primary-600 bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
                   noites sem dormir?
@@ -52,7 +51,7 @@ const Hero = () => {
                 </span>
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed max-w-xl lg:max-w-none">
+              <p className="text-xl text-gray-600 leading-relaxed max-w-full lg:max-w-none break-words">
                 Descubra o método que já transformou a vida de <strong className="text-primary-600">milhares de mães</strong> e 
                 finalmente tenha as noites tranquilas que você merece.
               </p>
@@ -61,7 +60,13 @@ const Hero = () => {
             <div className="space-y-4">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-10 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform"
+                className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-6 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 transform w-full sm:w-auto mx-auto"
+                onClick={() => {
+                  const el = document.getElementById('cta-transformar-noites');
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }}
               >
                 ✨ Quero minha maternidade mais leve
               </Button>
@@ -97,7 +102,7 @@ const Hero = () => {
               <img 
                 src="/lovable-uploads/80510ec7-7bcf-44d8-8b82-0935e173eea4.png" 
                 alt="Mamãe Tranquila - Guia Digital" 
-                className="relative w-full max-w-lg rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                className="relative w-full max-w-md sm:max-w-lg md:max-w-lg lg:max-w-lg h-[28.75rem] sm:h-[32rem] md:h-[36rem] rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300 object-contain"
               />
               
               {/* Floating badges */}
