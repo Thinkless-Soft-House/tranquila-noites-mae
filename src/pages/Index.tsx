@@ -10,7 +10,7 @@ import FinalCTA from "@/components/FinalCTA";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#FFF6FA]">
+    <div className="min-h-screen">
       <Hero />
       <PainPoints />
       <ProductIntro />
