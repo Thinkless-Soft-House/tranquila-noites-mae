@@ -36,45 +36,45 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 sm:py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
             <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-medium mb-6">
               <HelpCircle className="w-4 h-4" />
               Tire suas dúvidas
             </div>
             
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
               Perguntas
               <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
                 {" "}Frequentes
               </span>
             </h2>
             
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600 px-4">
               Respondemos as principais dúvidas que outras mães tiveram
             </p>
           </div>
           
-          <div className="bg-white rounded-3xl shadow-xl border p-8 animate-fade-in" style={{animationDelay: '0.2s'}}>
+          <div className="bg-white rounded-3xl shadow-xl border p-4 sm:p-8 animate-fade-in" style={{animationDelay: '0.2s'}}>
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-gray-50 rounded-2xl px-6 border-none shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-gray-50 rounded-2xl px-4 sm:px-6 border-none shadow-sm hover:shadow-md transition-shadow"
                 >
-                  <AccordionTrigger className="text-left text-gray-800 font-semibold hover:no-underline py-6 hover:text-primary-600">
+                  <AccordionTrigger className="text-left text-gray-800 font-semibold hover:no-underline py-4 sm:py-6 hover:text-primary-600">
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
                         <CheckCircle className="w-4 h-4 text-primary-600" />
                       </div>
-                      <span className="text-lg">{faq.question}</span>
+                      <span className="text-base sm:text-lg pr-4">{faq.question}</span>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 leading-relaxed pb-6 pl-11">
-                    <div className="text-base">
+                  <AccordionContent className="text-gray-600 leading-relaxed pb-4 sm:pb-6 pl-8 sm:pl-11">
+                    <div className="text-sm sm:text-base">
                       {faq.answer}
                     </div>
                   </AccordionContent>
@@ -82,16 +82,16 @@ const FAQ = () => {
               ))}
             </Accordion>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl border border-primary-100">
+            <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl border border-primary-100">
               <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-800 mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-3">
                   Ainda tem dúvidas? 🤔
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-4 text-sm sm:text-base px-2">
                   Nossa equipe está pronta para te ajudar! Entre em contato conosco pelo WhatsApp 
                   e tiramos todas as suas dúvidas antes da compra.
                 </p>
-                <div className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-full font-medium hover:bg-green-600 transition-colors cursor-pointer">
+                <div className="inline-flex items-center gap-2 bg-green-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium hover:bg-green-600 transition-colors cursor-pointer text-sm sm:text-base">
                   <span>💬</span>
                   <span>Falar no WhatsApp</span>
                 </div>
