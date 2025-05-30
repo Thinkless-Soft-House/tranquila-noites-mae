@@ -1,44 +1,40 @@
 import { Check, X } from "lucide-react";
 
-const PainPoints = () => {
+const PainPointsGer = () => {
   const problems = [
-    "Dorme mal todas as noites e acorda várias vezes",
-    "Se sente esgotada física e emocionalmente", 
-    "Tem medo de errar como mãe e prejudicar o bebê",
-    "Chora escondida de cansaço e exaustão",
-    "Não consegue ter um momento de descanso",
-    "Sente que perdeu sua identidade e liberdade"
+    "Schläft jede Nacht schlecht und wacht mehrmals auf",
+    "Fühlt sich körperlich und emotional erschöpft", 
+    "Hat Angst, als Mutter Fehler zu machen und dem Baby zu schaden",
+    "Weint heimlich aus Müdigkeit und Erschöpfung",
+    "Kann keinen Moment der Ruhe finden",
+    "Hat das Gefühl, ihre Identität und Freiheit verloren zu haben"
   ];
-
   const solutions = [
-    "Noites tranquilas com 6-8 horas de sono",
-    "Energia renovada para aproveitar a maternidade",
-    "Confiança total nas suas habilidades maternas",
-    "Momentos de paz e alegria com seu bebê",
-    "Tempo para cuidar de si mesma",
-    "Equilíbrio entre ser mãe e ser mulher"
+    "Ruhige Nächte mit 6-8 Stunden Schlaf",
+    "Neue Energie, um die Mutterschaft zu genießen",
+    "Volles Vertrauen in deine mütterlichen Fähigkeiten",
+    "Momente des Friedens und der Freude mit deinem Baby",
+    "Zeit, um dich um dich selbst zu kümmern",
+    "Balance zwischen Muttersein und Frau sein"
   ];
-
   return (
     <section className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-            Você se reconhece nesta situação?
+            Erkennst du dich in dieser Situation wieder?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Milhares de mães passam por isso todos os dias. Mas há uma luz no fim do túnel.
+            Tausende Mütter erleben das jeden Tag. Aber es gibt Licht am Ende des Tunnels.
           </p>
         </div>
-
         <div className="grid lg:grid-cols-3 gap-12 items-center max-w-7xl mx-auto">
           {/* Problems - Left */}
           <div className="space-y-6 animate-slide-up" style={{animationDelay: '0.2s'}}>
             <div className="text-center lg:text-left mb-8">
-              <h3 className="text-2xl font-bold text-red-600 mb-2">😰 Antes</h3>
-              <p className="text-gray-600">O que você está vivendo agora</p>
+              <h3 className="text-2xl font-bold text-red-600 mb-2">😰 Vorher</h3>
+              <p className="text-gray-600">Das erlebst du gerade</p>
             </div>
-            
             {problems.map((problem, index) => (
               <div 
                 key={index}
@@ -49,7 +45,6 @@ const PainPoints = () => {
               </div>
             ))}
           </div>
-
           {/* Center image */}
           <div className="flex flex-col items-center animate-scale-in" style={{animationDelay: '0.4s'}}>
             <div className="relative">
@@ -61,25 +56,22 @@ const PainPoints = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-3xl"></div>
             </div>
-            
             <div className="mt-8 text-center">
               <div className="bg-white rounded-full p-4 shadow-lg inline-flex items-center gap-3 transform -translate-y-8">
                 <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">Situação atual</span>
+                <span className="text-sm font-medium text-gray-700">Aktuelle Situation</span>
                 <div className="w-8 h-0.5 bg-gray-300"></div>
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-gray-700">Sua nova vida</span>
+                <span className="text-sm font-medium text-gray-700">Dein neues Leben</span>
               </div>
             </div>
           </div>
-
           {/* Solutions - Right */}
           <div className="space-y-6 animate-slide-up" style={{animationDelay: '0.6s'}}>
             <div className="text-center lg:text-left mb-8">
-              <h3 className="text-2xl font-bold text-green-600 mb-2">✨ Depois</h3>
-              <p className="text-gray-600">Como sua vida vai ser</p>
+              <h3 className="text-2xl font-bold text-green-600 mb-2">✨ Nachher</h3>
+              <p className="text-gray-600">So wird dein Leben sein</p>
             </div>
-            
             {solutions.map((solution, index) => (
               <div 
                 key={index}
@@ -91,15 +83,13 @@ const PainPoints = () => {
             ))}
           </div>
         </div>
-
         <div className="text-center mt-16 animate-fade-in" style={{animationDelay: '0.8s'}}>
           <div className="bg-white rounded-2xl p-8 shadow-xl max-w-2xl mx-auto border">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              🎯 A transformação está ao seu alcance
+              🎯 Die Veränderung ist zum Greifen nah
             </h3>
             <p className="text-lg text-gray-600">
-              Com o método <strong className="text-primary-600">Mamãe Tranquila</strong>, 
-              você vai da exaustão total para noites de paz em apenas 7 dias.
+              Mit der <strong className="text-primary-600">Entspannte Mama</strong> Methode gehst du in nur 7 Tagen von völliger Erschöpfung zu ruhigen Nächten über.
             </p>
           </div>
         </div>
@@ -108,4 +98,4 @@ const PainPoints = () => {
   );
 };
 
-export default PainPoints;
+export default PainPointsGer;

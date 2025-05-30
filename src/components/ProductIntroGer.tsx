@@ -1,52 +1,47 @@
 import { Star, BookOpen, CheckCircle, Clock, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const ProductIntro = () => {
+const ProductIntroGer = (props) => {
   const features = [
     {
       icon: BookOpen,
-      title: "Técnicas validadas cientificamente",
-      description: "Métodos aprovados por pediatras e especialistas em sono infantil"
+      title: "Wissenschaftlich validierte Techniken",
+      description: "Von Kinderärzten und Schlafexperten empfohlene Methoden"
     },
     {
       icon: CheckCircle,
-      title: "Checklists práticos",
-      description: "Guias passo a passo para implementar cada técnica com facilidade"
+      title: "Praktische Checklisten",
+      description: "Schritt-für-Schritt-Anleitungen zur einfachen Umsetzung jeder Technik"
     },
     {
       icon: Users,
-      title: "Depoimentos reais",
-      description: "Histórias inspiradoras de mães que transformaram suas noites"
+      title: "Echte Erfahrungsberichte",
+      description: "Inspirierende Geschichten von Müttern, die ihre Nächte verändert haben"
     },
     {
       icon: Clock,
-      title: "Plano de 7 dias",
-      description: "Cronograma estruturado para resultados rápidos e duradouros"
+      title: "7-Tage-Plan",
+      description: "Strukturierter Zeitplan für schnelle und nachhaltige Ergebnisse"
     }
   ];
-
   return (
     <section className="py-24 bg-gradient-to-br from-primary-50 via-white to-accent-50 overflow-x-hidden">
       <div className="container mx-auto px-2 sm:px-4 max-w-full">
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full font-medium mb-6">
             <Star className="w-4 h-4 fill-current" />
-            Método #1 em sono infantil
+            Methode Nr. 1 für Kinderschlaf
           </div>
-          
           <h2 className="text-4xl lg:text-6xl font-bold text-gray-800 mb-6">
-            Mais que um guia,<br />
+            Mehr als ein Leitfaden,<br />
             <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-              uma transformação completa
+              eine komplette Transformation
             </span>
           </h2>
-          
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            O <strong className="text-primary-600">Mamãe Tranquila</strong> é o resultado de anos de pesquisa e 
-            experiência real com milhares de famílias. Um método que realmente funciona.
+            <strong className="text-primary-600">Entspannte Mama</strong> ist das Ergebnis jahrelanger Forschung und echter Erfahrung mit tausenden Familien. Eine Methode, die wirklich funktioniert.
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
             <div 
@@ -57,45 +52,40 @@ const ProductIntro = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
-              
               <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-primary-600 transition-colors">
                 {feature.title}
               </h3>
-              
               <p className="text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
-
         <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           <div className="animate-scale-in w-full max-w-[95vw] mx-auto" style={{animationDelay: '0.4s'}}>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary-400 to-accent-400 rounded-3xl blur-3xl opacity-30 transform rotate-3"></div>
               <img 
-                src="/lovable-uploads/80510ec7-7bcf-44d8-8b82-0935e173eea4.png" 
+                src="/lovable-uploads/mockupger.png" 
                 alt="Mamãe Tranquila - Guia Digital" 
                 className="relative w-full max-w-md mx-auto rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
                 loading="lazy"
               />
             </div>
           </div>
-
           <div className="space-y-8 animate-fade-in" style={{animationDelay: '0.6s'}}>
             <div className="space-y-6">
               <h3 className="text-3xl lg:text-4xl font-bold text-gray-800">
-                O que você encontra dentro do guia:
+                Das findest du im Leitfaden:
               </h3>
-              
               <div className="space-y-4">
                 {[
-                  "7 técnicas comprovadas para fazer o bebê dormir rapidamente",
-                  "Como criar o ambiente perfeito para o sono",
-                  "Rotinas que realmente funcionam para cada idade",
-                  "O que fazer quando nada parece funcionar",
-                  "Técnicas de auto-cuidado para a mãe exausta",
-                  "Plano de implementação dia a dia"
+                  "7 bewährte Techniken, damit dein Baby schnell einschläft",
+                  "Wie du die perfekte Schlafumgebung schaffst",
+                  "Routinen, die in jedem Alter wirklich funktionieren",
+                  "Was tun, wenn scheinbar nichts hilft",
+                  "Selbstfürsorge-Techniken für erschöpfte Mütter",
+                  "Tag-für-Tag-Umsetzungsplan"
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
@@ -106,20 +96,17 @@ const ProductIntro = () => {
                 ))}
               </div>
             </div>
-
             <div className="bg-gradient-to-r from-primary-50 to-accent-50 p-6 rounded-2xl border border-primary-100">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center">
                   <Star className="w-4 h-4 text-white fill-current" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-800">Bônus Exclusivo</h4>
+                <h4 className="text-lg font-semibold text-gray-800">Exklusiver Bonus</h4>
               </div>
               <p className="text-gray-700">
-                <strong>Acesso ao grupo privado</strong> com outras mães que estão passando pela mesma jornada. 
-                Suporte, dicas e muito carinho! 💜
+                <strong>Zugang zur privaten Gruppe</strong> mit anderen Müttern, die denselben Weg gehen. Unterstützung, Tipps und ganz viel Herzlichkeit! 💜
               </p>
             </div>
-
             <Button 
               size="lg" 
               className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full lg:w-auto"
@@ -130,7 +117,7 @@ const ProductIntro = () => {
                 }
               }}
             >
-              🎯 Quero transformar minhas noites
+              🎯 Ich will meine Nächte verändern
             </Button>
           </div>
         </div>
@@ -139,4 +126,4 @@ const ProductIntro = () => {
   );
 };
 
-export default ProductIntro;
+export default ProductIntroGer;
