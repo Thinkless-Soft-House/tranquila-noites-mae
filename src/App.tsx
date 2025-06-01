@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Downsell from "./pages/Downsell";
 import Ger from "./pages/Ger";
+import IndexFr from "./pages/IndexFr";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +21,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/downsell" element={<Downsell />} />
           <Route path="/ger" element={<Ger />} />
+          <Route path="/fr" element={<IndexFr />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
