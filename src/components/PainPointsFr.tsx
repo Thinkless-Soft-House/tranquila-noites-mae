@@ -54,7 +54,7 @@ const PainPointsFr = () => {
           <div className="flex flex-col items-center animate-scale-in" style={{animationDelay: '0.4s'}}>
             <div className="relative">
               <img 
-                src="/lovable-uploads/8fa50c17-6da6-418d-8d50-ebe70eaf1e2c.png" 
+                src="/lovable-uploads/mae.webp" 
                 alt="Maman fatiguée avec bébé" 
                 className="w-full max-w-sm rounded-3xl shadow-2xl"
                 loading="lazy"
